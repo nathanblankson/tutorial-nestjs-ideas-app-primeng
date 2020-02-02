@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
@@ -13,7 +12,6 @@ import { MessageService } from 'primeng/api';
   declarations: [],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     CardModule,
     InputTextModule,
     ButtonModule,
@@ -22,7 +20,6 @@ import { MessageService } from 'primeng/api';
   ],
   exports: [
     CommonModule,
-    BrowserAnimationsModule,
     CardModule,
     InputTextModule,
     ButtonModule,
