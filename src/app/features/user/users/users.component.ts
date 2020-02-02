@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { User } from '@app/models/user';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+
 import { AppState } from '../state';
+import { User } from '@app/models/user';
 import { LoadUsers } from '../state/user.action';
 
 @Component({

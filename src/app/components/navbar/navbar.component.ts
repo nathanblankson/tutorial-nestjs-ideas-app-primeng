@@ -18,6 +18,10 @@ export class NavbarComponent implements OnInit {
     {
       label: 'Users',
       routerLink: ['/users']
+    },
+    {
+      label: 'Ideas',
+      routerLink: ['/ideas']
     }
   ];
 
