@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { AppState } from '../state';
 import { Idea } from '@app/models/idea';
 import { LoadIdeas } from '../state/idea.action';
+import { selectAllIdeas } from '../state/idea.selector';
 
 @Component({
   selector: 'app-ideas',
@@ -18,6 +19,6 @@ export class IdeasComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new LoadIdeas());
-    this.ideas = this.store.select(state => state.ideas.ideas);
+    this.ideas = this.store.select(selectAllIdeas);
   }
 }

@@ -1,8 +1,9 @@
-import { Idea } from '../../../models/idea';
-import * as Store from '../../../store/app-store.module';
+import { Idea } from '@app/models/idea';
+import { Entity } from '@app/models/entity';
+import * as Store from '@app/store/app-store.module';
 
 export interface IdeaState {
-  ideas: Idea[];
+  ideas: Entity<Idea>;
   loading: boolean;
   loaded: boolean;
 }

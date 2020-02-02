@@ -4,7 +4,7 @@ import { Action, IdeaActions } from './idea.action';
 const initialState: IdeaState = {
   loaded: false,
   loading: false,
-  ideas: []
+  ideas: {}
 };
 
 export const ideaReducer: (state: IdeaState, action: Action) => IdeaState = (
@@ -15,7 +15,14 @@ export const ideaReducer: (state: IdeaState, action: Action) => IdeaState = (
     case IdeaActions.LOAD_IDEAS:
       return { ...state, loaded: false, loading: true };
     case IdeaActions.LOAD_IDEAS_SUCCESS:
-      return { ...state, ideas: action.payload, loaded: true, loading: false };
+      const ideas = action.payload.reduce(
+        (acc, idea) => ({
+          ...acc,
+          [idea.id]: idea
+        }),
+        state.ideas
+      );
+      return { ...state, ideas, loaded: true, loading: false };
     default:
       return state;
   }
