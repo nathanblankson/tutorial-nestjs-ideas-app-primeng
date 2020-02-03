@@ -4,6 +4,7 @@ import * as Store from '@app/store/app-store.module';
 
 export interface IdeaState {
   ideas: Entity<Idea>;
+  selectedIdea?: string;
   loading: boolean;
   loaded: boolean;
 }
